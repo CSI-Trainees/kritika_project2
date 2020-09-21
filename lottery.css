@@ -1,0 +1,138 @@
+html,body,div {
+	padding:0;
+	margin:0;
+	box-sizing: inherit;
+}
+.head {
+	color:transparent;
+	font-family: cursive;
+	font-size:50px;
+	text-align: center;
+	margin-top: 60px;
+	letter-spacing: 2px;
+	background-image: linear-gradient(to right ,#2F4F4F,beige,black,#D2691E);
+	-webkit-background-clip: text;
+	animation: animate 10s linear infinite;
+	background-size: 1000%;
+}
+@keyframes animate 
+{
+	0%
+	{
+		background-position: 0% 100%;
+	}
+	50%
+	{
+		background-position: 100% 0%;
+		
+	}
+	100%
+	{
+		background-position: 0% 100%;
+		
+	}
+}
+.subhead {
+	font-family: Trebuchet MS;
+	margin-top: 10px;
+	text-align: center;
+	font-size:35px;
+	letter-spacing: 1px;
+	color:lightblue;
+}
+.background {
+	display: block;
+    width: 100%;
+    height: 100%;
+    position:absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background-size:cover;
+	background-position: center;
+	background-image: url(background.jpg);
+}
+.background::before {
+	display: block;
+	content: " ";
+	position:absolute;
+	height:100%;
+	width:100%;
+	opacity: .3;
+	background:rgb(128,0,128);
+	background-size:cover;
+}
+.btn-wrapper {
+	cursor:pointer;
+	font-family: cursive;
+	margin-top: 140px;
+	margin-left:42%;
+	z-index: 100;
+	padding:12px;
+	font-weight: 500;
+	color:black;
+	letter-spacing: 2px;
+	border-radius:25px;
+	border: solid grey;
+	background-color: lightblue;
+	transition: all .3s;
+}
+.btn-wrapper:hover {
+	background-color:black;
+	color:lightblue;
+	transform:scale(1.1);
+}
+.write {
+	position: inherit;
+	display:inline-block;
+	margin-left:42%;
+	margin-top: 20px;
+	font-size: 18px;
+	border:1px solid black;
+	border-radius: 20px;
+	z-index: 50;
+}
+
+.submit {
+	position: inherit;
+	font-size:20px;
+	border-radius: 40px;
+	cursor: pointer;
+	z-index: 50;
+	transition: all .3s;
+}
+.submit:hover {
+	color:white;
+	background-color: black;
+	transform:scale(1.1);
+}
+.number-modal-wrapper {
+	top:0;
+	bottom:0;
+	right:0;
+	left:0;
+}
+.modal {
+	position:relative;
+	text-align:center;
+	color: black;
+	background-color: white;
+	width:600px;
+	left:30%;
+	border-radius:20px;
+	font-size: 30px;
+	box-shadow: 0 0 10px black;
+	z-index: 10;
+}
+.fa-times {
+	position:absolute;
+	cursor:pointer;
+	color:black;
+	top:2px;
+	right:10px;
+}
+.fa-times:hover {
+   transition:0.5s;
+   color:black;
+   background-color:transparent; 
+}
