@@ -17,25 +17,56 @@ button.addEventListener("click", () => {
 closebtn.addEventListener("click", () => {
   closeModal();
 });
-
-function abc() {
+let showresult = document.getElementById("showresult");
+showresult.addEventListener("click" , () => {
+  myfunction();
+});
+const myfunction = () => {
 	let search = document.getElementById("result");
 	let textv = search.value;
+	let Show = document.getElementById("show");
     console.log(textv);
 	if(textv == 17)
 	{
-	document.getElementById("xyz").innerHTML = "CONGRATULATIONS! YOU ARE THE WINNER";	
+		let html=`<div class="display">
+		<img class="winner" src="winner.jpg">
+		<p class="text">CONGRATULATIONS!
+		<br> YOU ARE THE WINNER</p>
+		</div>`
+		Show.innerHTML = html;	
 	}
 	else if(textv == 15)
 	{
-	document.getElementById("xyz").innerHTML = "CONGRATULATIONS! YOU ARE THE FIRST RUNNER-UP";	
+		let html=`<div class="display">
+		<img src="first.jpg">
+		<p class="text">CONGRATULATIONS!
+		<br> YOU ARE THE FIRST RUNNER-UP</p>
+		</div>`
+		Show.innerHTML = html;
 	}
 	else if(textv == 13)
 	{
-	document.getElementById("xyz").innerHTML = "CONGRATULATIONS! YOU ARE THE SECOND RUNNER-UP";	
+		let html=`<div class="display">
+		<img src="second.jpg">
+		<p class="text">CONGRATULATIONS!
+		<br> YOU ARE THE SECOND RUNNER-UP</p>
+		</div>`
+		Show.innerHTML = html;
 	}
 	else 
 	{
-	document.getElementById("xyz").innerHTML = "TRY AGAIN! BETTER LUCK NEXT TIME";	
+	document.getElementById("show").innerHTML = "TRY AGAIN! BETTER LUCK NEXT TIME";	
 	}
-}
+};
+const open = document.getElementById("showresult");
+const close = document.getElementById("close_it");
+const container = document.getElementById("container");
+
+open.addEventListener("click", () => {
+    container.classList.add("active");
+});
+
+close.addEventListener("click", () => {
+    container.classList.remove("active");
+});
+

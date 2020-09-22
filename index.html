@@ -6,6 +6,7 @@
 	<link rel="stylesheet" href="lottery.css">
 </head>
 <body>
+	<div class="top-wrapper">
 	<div class="background"></div>
 	<h1 class="head">"Give yourself the gift of a Dream"</h1>
 	<br>
@@ -21,8 +22,41 @@
 </div>
 	<br>
 	<input class="write" type="text" id="result" placeholder="Enter your number">
-	<button class="submit" id="showresult" onclick="abc()">Check</button>
-	        <div class=" final" id ="xyz"></div>
+	<button class="submit" id="showresult">Check</button>
+	 <div class="popup-container" id="container">
+       <div class="popup"> 
+        <button id="close_it">&times;</button>
+         <div id="show"></div>
+       </div>
+      </div>
+  </div>
+	      <main>
+	        	<div class="wrapper">
+	        	<div class="middle_heading">Have a look at amazing prizes!</div>
+	        	<div class="container">
+	        		<h2 class="heading">WINNER</h2>
+	        		<div class="box">
+	        			<img class="image1" src="santorini.jpg">
+	        			<div class="content">
+	        			</div>
+	        		</div>
+	        		<h2 class="heading">FIRST RUNNER-UP</h2>
+	        			<div class="box">
+	        				<div class="content">
+	        					<img class="image2" src="apple.jpg">
+	        			</div>
+	        		</div>
+	        		<h2 class="heading">SECOND RUNNER-UP</h2>
+	        			<div class="box">
+	        				<div class="content">
+	        					<img class="image3" src="prime.jpg">
+	        			</div>
+	        		</div>
+	        	</div>
+	        </div>
+	        </main>
+	        <footer>
+	        </footer>
 </body>
 <script type="text/javascript" src="script.js"></script>
 </html>

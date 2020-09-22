@@ -3,6 +3,12 @@ html,body,div {
 	margin:0;
 	box-sizing: inherit;
 }
+.top-wrapper {
+	width:100%;
+	height:500px;
+	margin:0;
+	padding: 0;
+}
 .head {
 	color:transparent;
 	font-family: cursive;
@@ -12,7 +18,7 @@ html,body,div {
 	letter-spacing: 2px;
 	background-image: linear-gradient(to right ,#2F4F4F,beige,black,#D2691E);
 	-webkit-background-clip: text;
-	animation: animate 10s linear infinite;
+	animation: animate 15s linear infinite;
 	background-size: 1000%;
 }
 @keyframes animate 
@@ -34,11 +40,27 @@ html,body,div {
 }
 .subhead {
 	font-family: Trebuchet MS;
-	margin-top: 10px;
+	margin-top: 5px;
 	text-align: center;
 	font-size:35px;
 	letter-spacing: 1px;
 	color:lightblue;
+	animation: hello 5s infinite ease-in-out;
+}
+@keyframes hello
+{
+	0%
+	{
+	transform: scale(1);
+	}
+	50%
+	{
+	transform: scale(.8);
+	}
+	100%
+	{
+	transform: scale(1);
+	}
 }
 .background {
 	display: block;
@@ -123,6 +145,10 @@ html,body,div {
 	font-size: 30px;
 	box-shadow: 0 0 10px black;
 	z-index: 10;
+	display:none;
+}
+.modal.active {
+	display: flex;
 }
 .fa-times {
 	position:absolute;
@@ -135,4 +161,91 @@ html,body,div {
    transition:0.5s;
    color:black;
    background-color:transparent; 
+}
+.popup-container {
+	position: fixed;
+	display:none;
+	top:0;
+	bottom:0;
+	right:0;
+	left:0;
+	justify-content: center;
+}
+.popup {
+	margin:100px auto;
+	height:500px;
+	width:30%;
+}
+.popup-container.active {
+	display: flex;
+}
+.display {
+	position: relative;
+	background-color:grey;
+	color:black;
+	border-radius:60px;
+}
+.display p {
+	text-align: center;
+	font-weight: 700;
+}
+.display .winner {
+	padding-top: 10px;
+	padding-left: 110px;
+}
+.display .first {
+	padding-top: 10px;
+	padding-left: 110px;
+}
+.display .second {
+	padding-top: 10px;
+	padding-left: 110px;
+}
+.wrapper {
+	background-color:lightblue;
+	z-index: -1;
+}
+.middle_heading {
+	font-family: Trebuchet MS;
+	text-align: center;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-size:40px;
+	color:darkgreen;
+    margin-top: 60px;
+    padding-top:50px;
+}
+.container {
+	margin:40px;
+	padding-bottom: 20px;
+}
+.container .box {  
+	height:20rem;
+	position: relative;
+	display: flex;
+	margin:0 100px 90px 100px;
+	box-shadow:inset 0 0 10px grey;
+}
+.image1 {
+	float: right;
+	width:100%;
+	height:100%;
+	background-size: cover;
+}
+.image2 {
+	float: right;
+	width:100%;
+	height:100%;
+	background-size: cover;
+}
+.image3 {
+	float: right;
+	width:100%;
+	height:100%;
+	background-size: cover;
+}
+.container .heading {
+	text-align: center;
+	font-weight:700;
+	font-size: 2rem;
 }
