@@ -56,11 +56,12 @@ const myfunction = () => {
 	else 
 	{
 	    let html=`<div class="display">
-	    <div class="lose">TRY AGAIN!
+	    <div class="lose">TRY AGAIN !
 	    <br> BETTER LUCK NEXT TIME</div>
 	    </div>`
 	    Show.innerHTML = html;	
 	}
+	document.getElementById("showresult").disabled = true;
 };
 const open = document.getElementById("showresult");
 const close = document.getElementById("close_it");
