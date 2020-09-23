@@ -38,7 +38,7 @@ const myfunction = () => {
 	else if(textv == 15)
 	{
 		let html=`<div class="display">
-		<img src="first.jpg">
+		<img class="winner" src="first.jpg">
 		<p class="text">CONGRATULATIONS!
 		<br> YOU ARE THE FIRST RUNNER-UP</p>
 		</div>`
@@ -47,7 +47,7 @@ const myfunction = () => {
 	else if(textv == 13)
 	{
 		let html=`<div class="display">
-		<img src="second.jpg">
+		<img class="winner" src="second.jpg">
 		<p class="text">CONGRATULATIONS!
 		<br> YOU ARE THE SECOND RUNNER-UP</p>
 		</div>`
@@ -55,7 +55,11 @@ const myfunction = () => {
 	}
 	else 
 	{
-	document.getElementById("show").innerHTML = "TRY AGAIN! BETTER LUCK NEXT TIME";	
+	    let html=`<div class="display">
+	    <div class="lose">TRY AGAIN!
+	    <br> BETTER LUCK NEXT TIME</div>
+	    </div>`
+	    Show.innerHTML = html;	
 	}
 };
 const open = document.getElementById("showresult");
